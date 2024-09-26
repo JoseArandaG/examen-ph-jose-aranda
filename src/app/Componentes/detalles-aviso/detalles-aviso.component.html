@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalles del Aviso</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarModal()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Titulo: {{ titulo }}</ion-card-title>
+      <ion-card-subtitle>
+        <p>Fecha: {{ fecha | date: 'yyyy-MM-dd' }}</p>
+        <p>Descripción: {{ descripcion }}</p>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-img [src]="foto" style="width: 400px; height: auto;"/> <!-- Uso de [src] para enlace a la propiedad -->
+    </ion-card-content>
+  </ion-card>
+</ion-content>

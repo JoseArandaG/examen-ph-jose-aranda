@@ -1,0 +1,45 @@
+<ion-content >
+<ion-list>
+  <ion-item>
+    <ion-input 
+    [(ngModel)]="titulo"
+    label="Titulo" 
+    required="required"
+    minlength="5"
+    #tituloInput="ngModel"
+    labelPlacement="stacked">
+  </ion-input>
+  <div *ngIf="titulo.length < 5 && titulo.length > 0">
+    <ion-text color="danger">El título debe tener al menos 5 caracteres</ion-text>
+  </div>
+  </ion-item>
+
+  <ion-item>
+    <ion-input
+    [(ngModel)]="descripcion"
+    label="Descripción"
+    required="required"
+    minlength="20"
+    #descripcionInput="ngModel"
+    labelPlacement="stacked">
+  </ion-input>
+  <div *ngIf="descripcion.length < 20 && descripcion.length >  0">
+    <ion-text color="danger">La descripción debe tener al menos 20 caracteres.</ion-text>
+  </div>
+  
+  </ion-item>
+
+  <ion-item>
+    <app-foto-aviso/>
+  </ion-item>
+  
+  <div><ion-button expand="full" (click)="agregarAviso()">Guardar</ion-button></div>
+  
+  
+
+  <div *ngIf="avisoGuardado">
+    <ion-text color="success">El aviso fue guardado correctamente</ion-text>
+  </div>
+
+</ion-list>
+</ion-content>

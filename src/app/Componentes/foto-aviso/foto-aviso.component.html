@@ -1,0 +1,15 @@
+<ion-button (click)="tomarFoto()">
+    <ion-icon slot="start" name="camera"/>
+      Fotografia
+    </ion-button>
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-col slot="end" *ngFor="let f of fotos">
+            <ion-img [src]="'data:image/jpeg;base64,' +f" style="width: 400px;width: 400px;"/>
+          </ion-col>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>

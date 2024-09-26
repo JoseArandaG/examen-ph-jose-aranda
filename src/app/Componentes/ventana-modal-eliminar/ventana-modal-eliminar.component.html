@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Confirmar Eliminación</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="CancelarBorrar()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p>¿Estás seguro de que deseas eliminar este aviso?</p>
+    <ion-button expand="full" color="danger" (click)="ConfirmarBorrar()">Eliminar</ion-button>
+    <ion-button expand="full" color="light" (click)="CancelarBorrar()">Cancelar</ion-button>
+</ion-content>
